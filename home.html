@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <style>
+
+        @font-face {
+            font-family: 'MapoFlowerIsland';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoFlowerIslandA.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+        .notosanskr * { 
+        font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        
+        #all {
+            position: absolute;
+            top: 5%;
+            left: 50%;
+
+            width: 800px;
+            height: 900px;
+            margin-left: -400px;
+        }
+        #up {
+            position: absolute;
+            top: 0%;
+            left: 0%;
+
+            width: 100%;
+            height: 100px;
+
+            text-align: center;
+            line-height: 50px;
+            font-family: 'MapoFlowerIsland';
+        }
+        #left {
+            position: absolute;
+            top: 100px;
+            left: 0%;
+
+            width: 392px;
+            height: 500px;
+            
+            border: 4px solid #F6F6F6;
+            background-color: #F6F6F6;
+
+        }
+        #sns {
+            position: absolute;
+            top: 100px;
+            left: 50%;
+
+            width: 392px;
+            height: 500px;
+
+
+            border: 4px solid #F6F6F6;
+
+        }
+
+        #icons {
+            display: grid;
+            grid-template-columns: 120px 120px;
+            position: absolute;
+            width: 240px;
+            height: 360px;
+            top: 60px;
+            left: 80px;
+        }
+        
+        #down1 {
+            position: absolute;
+            top: 600px;
+            left: 0%;
+
+            width: 100%;
+            height: 100px;
+            line-height: 160px;
+            border-bottom: 2px solid #5D5D5D;
+            
+            font-family: 'Noto Sans KR';
+            font-size: 20px;
+            font-weight: bold;
+        }
+        #down21 {
+            position: absolute;
+            top: 700px;
+            left: 0%;
+
+            width: 100%;
+            height: 100px;
+            line-height: 30px;
+
+            font-family: 'Noto Sans KR';
+        }
+        
+        a {
+            width: 30px;
+            height: 30px;
+            margin: 45px;
+        }
+
+        a:hover {
+            cursor: pointer;
+        }
+        .icon {
+            width: 30px;
+            height: 30px;
+            
+        }
+        .icon:hover {
+            opacity: 0.3;
+            border-style: 1px solid #eaeaea;
+            transition: all 0.35s ease;
+        }
+
+        .btn1 {
+            position: absolute;
+            
+            top: 50%;
+            left: 100%;
+            margin-top: -30px;
+            margin-left: -70px;
+            width: 60px;
+            height: 60px;
+            border-radius: 30px;
+
+            border: 4px solid #5D5D5D;
+            background-color: #EAEAEA;
+            font-family: 'MapoFlowerIsland';
+            font-size: 20px;
+            font-weight: bold;
+            color: #5D5D5D;
+
+            -webkit-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+            -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+        }
+        .btn1:hover {
+            border: 4px solid #ffffff;
+            background-color: #8C8C8C;
+            color: #EAEAEA;
+            -webkit-transition: all 0.35s ease;
+            transition: all 0.35s ease;
+            cursor: pointer;
+        }
+
+        .p1 {
+            margin-top: 20px;
+        }
+
+        [class^='image'] {
+            width: 300px;
+            height: 400px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -200px;
+            margin-left: -150px;
+            transition: all 0.35s ease;
+        }
+
+    </style>
+    
+</head>
+<body>
+    <div id="all">
+        <div id="up">
+            <h1>HELLO</h1>
+        </div>
+        <div id="left">
+            <div id="image0"><img class="images" src="images/0.jpg"></div>
+            <div id="image1"><img class="images" src="images/1.jpg"></div>
+            <div id="image2"><img class="images" src="images/2.jpg"></div>
+            <div id="image3"><img class="images" src="images/3.jpg"></div>
+            <div id="image4"><img class="images" src="images/4.jpg"></div>
+            <div id="image5"><img class="images" src="images/5.jpg"></div>
+            <div id="image6"><img class="images" src="images/6.jpg"></div>
+        </div>
+        <div id="sns">
+            <div id="icons">
+                <a><image id="icon1" class="icon" src="images/user.png"></a>
+                <a href="https://www.facebook.com/sunissocute"><image id="icon4" class="icon" src="images/facebook.png"></a>
+                <a><image id="icon2" class="icon" src="images/whatsapp.png"></a>
+                <a href="https://www.instagram.com/sunissocute/"><image id="icon5" class="icon" src="images/instagram.png"></a>
+                <a><image id="icon3" class="icon" src="images/email.png"></a>
+                <a href="https://www.youtube.com/channel/UCT7bB2md-c84r2NLnw30FOA"><image id="icon6" class="icon" src="images/youtube.png"></a>
+            </div>
+        </div>
+
+        <div id="down1">
+             My Project
+        </div>
+        <div id="down21">
+            <p class="p1">
+                영상처리를 활용한 벽돌깨기 게임<br>
+                html / css / javascript / jquery
+            </p>
+            <input type="button" class="btn1" value="GO" onclick="location.href='choose.html'">
+        </div>
+    </div>
+
+    <script>
+        // 사진 숨기기
+        $('#image1').hide();
+        $('#image2').hide();
+        $('#image3').hide();
+        $('#image4').hide();
+        $('#image5').hide();
+        $('#image6').hide();
+
+        // 아이콘에 마우스 호버시 사진 나타내기
+        $('#icon1').hover(function() {
+            $('#image1').show();
+            }, function(){
+            $('#image1').hide();
+        });
+        $('#icon2').hover(function() {
+            $('#image2').show();
+            }, function(){
+            $('#image2').hide();
+        });
+        $('#icon3').hover(function() {
+            $('#image3').show();
+            }, function(){
+            $('#image3').hide();
+        });
+        $('#icon4').hover(function() {
+            $('#image4').show();
+            }, function(){
+            $('#image4').hide();
+        });
+        $('#icon5').hover(function() {
+            $('#image5').show();
+            }, function(){
+            $('#image5').hide();
+        });
+        $('#icon6').hover(function() {
+            $('#image6').show();
+            }, function(){
+            $('#image6').hide();
+        });
+        $('#image1').hide();
+        
+    </script>
+</body>
+</html>
