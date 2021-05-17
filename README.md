@@ -16,16 +16,14 @@
 <br>
    
 ## 💻 화면 구성
-**home.html**
-<img src="/home.png">
-<img src="YOUR URL" width="YOUR_WIDTH" height="YOUR_HEIGHT">
-
-**(1) choose.html**   
-: 원하는 이미지 선택   
-**(2) edit.html**   
-: 선택한 이미지 편집   
-**(3) break.html**   
-: 편집한 이미지로 벽돌깨기 게임   
+💨 **home.html**
+<img src="https://user-images.githubusercontent.com/84164109/118426167-ae2f7f80-b705-11eb-9f91-974667186695.png">
+💨 **choose.html**: 원하는 이미지 선택
+<img src="https://user-images.githubusercontent.com/84164109/118426218-c7d0c700-b705-11eb-87c2-d257413b21d6.png">
+💨 **edit.html**: 선택한 이미지 편집   
+<img src="https://user-images.githubusercontent.com/84164109/118426232-cf906b80-b705-11eb-94d7-12efe48d18c2.png">
+💨 **break.html**: 편집한 이미지로 벽돌깨기 게임   
+<img src="https://user-images.githubusercontent.com/84164109/118426229-ce5f3e80-b705-11eb-939e-8204a09ed7bd.png">
 <br>
    
 ## 🎬 시연 영상
