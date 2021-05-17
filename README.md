@@ -1,5 +1,5 @@
 # Breakout-Game-using-JS-Image-Processing
-JS 기반의 영상처리를 활용한 벽돌깨기 게임   
+### JS 기반의 영상처리를 활용한 벽돌깨기 게임   
    
 
 ## 🔥 프로젝트 개요
@@ -22,7 +22,20 @@ JS 기반의 영상처리를 활용한 벽돌깨기 게임
 : 편집한 이미지로 벽돌깨기 게임   
    
 
-## 💎 구현 방법
+## 🎬 시연 영상
+https://youtu.be/gYLwj4hH6UE
+
+
+## 📋 참고 자료
+2D breakout game using pure JavaScript   
+https://developer.mozilla.org/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript   
+   
+
+## 🍺 일기장
+https://mygummy2.tistory.com/36
+   
+
+## 💎 중요 코드
 ✔ 이미지 선택하여 화면에 출력하기
 ```Java Script
 var inCanvas, inCtx; // 캔버스 관련 변수
@@ -133,4 +146,86 @@ for(var i=0; i<outHeight; i++) {
 // 출력 캔버스에 종이 붙이기
 outCtx.putImageData(outPaper, 0, 0);
 ```
+✔ 이미지 영상처리 후 출력하기
+```Java Script
+// ** 벽돌 관련 변수 **
+// 벽돌 개수
+var brickRowCount = 8;
+var brickColumnCount = 16;
+// 벽돌 크기
+var brickWidth = inWidth/brickRowCount; // 64px
+var brickHeight = inHeight/brickColumnCount; // 32px
+// 벽돌 사이 패딩
+var brickPadding = 0;
+
+// 벽돌 배열 생성
+var bricks = [];
+for(var c=0; c<brickColumnCount; c++) {
+   bricks[c] = [];
+   for(var r=0; r<brickRowCount; r++) {
+      // 벽돌을 그릴 위치와 상태
+      bricks[c][r] = { x: 0, y: 0, status: 1 };
+   }
+}
+
+// 이미지 출력 배열 생성 후 픽셀값 저장하여 출력하기
+m = brickColumnCount;
+n = brickRowCount;
+
+function makeOutArray(m, n) {
+   outWidth = brickWidth;
+   outHeight = brickHeight;
+
+   // 출력 3차원 배열을 준비
+   outImageArray = new Array(3);
+   for(var j=0; j<3; j++) {
+      outImageArray[j] = new Array(outHeight);
+      for(var i=0; i<outHeight; i++) 
+        outImageArray[j][i] = new Array(outWidth);
+   }
+
+   // 출력 배열에 픽셀값 저장
+   for(var j=0; j<3; j++) {
+      for(var i=0; i<outHeight; i++) 
+        for (var k=0; k<outWidth; k++) 
+            outImageArray[j][i][k] = inImageArray[j][outHeight*m+i][outWidth*n+k];
+   }
+
+   // 이미지 출력
+   outPaper = ctx.createImageData(outWidth, outHeight);
+   var R, G, B, A;
+   for(var i=0; i<outHeight; i++) {
+      for (var k=0; k<outWidth; k++) {
+        R = outImageArray[0][i][k].charCodeAt(0);
+        G = outImageArray[1][i][k].charCodeAt(0);
+        B = outImageArray[2][i][k].charCodeAt(0);
+        outPaper.data[(i*outWidth + k) * 4 + 0] = R;
+        outPaper.data[(i*outWidth + k) * 4 + 1] = G;
+        outPaper.data[(i*outWidth + k) * 4 + 2] = B;
+        outPaper.data[(i*outWidth + k) * 4 + 3] = 255;
+      }
+   }
+}
+
+// 벽돌 위치에 맞게 이미지 출력하기
+function drawBricks() {
+   for(var c=0; c<brickColumnCount; c++) {
+      for(var r=0; r<brickRowCount; r++) {
+        // 상태: 1 그려짐
+        if(bricks[c][r].status == 1) {
+            // 벽돌 그릴 위치 조정
+            var brickX = (r*(brickWidth+brickPadding))+brickOffsetLeft;
+            var brickY = (c*(brickHeight+brickPadding))+brickOffsetTop;
+            // 벽돌 그릴 위치를 배열에 저장
+            bricks[c][r].x = brickX;
+            bricks[c][r].y = brickY;
+            // 이미지 출력
+            makeOutArray(c, r);
+            ctx.putImageData(outPaper,brickX,brickY);
+        }
+      }
+   }
+}
+```
+   
 
