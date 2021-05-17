@@ -1,42 +1,48 @@
 # Breakout-Game-using-JS-Image-Processing
 ### JS 기반의 영상처리를 활용한 벽돌깨기 게임   
-   
+입니다.
+<br>
+<hr>
 
 ## 🔥 프로젝트 개요
 프론트엔드 프로그래밍을 공부하며 JS를 이용한 이미지 디지털 영상처리 알고리즘에 대해 집중적으로 학습했다.   
 영상처리를 최대한 활용하려 했고, 재미있는 요소를 추가하고자 간단한 게임과 접목시켜 프로젝트를 진행했다.   
+<br>
    
-
 ## 🛠 프로젝트 환경
-✅ 사용 언어: HTML5 / CSS3 / JAVASCRIPT   
-✅ 개발 환경: Visual Studio Code   
-✅ 제작 기간: 21.03.25 – 21.03.30   
-   
+✅ **사용 언어**: HTML5 / CSS3 / JAVASCRIPT   
+✅ **개발 환경**: Visual Studio Code   
+✅ **제작 기간**: 21.03.25 – 21.03.30   
+<br>
    
 ## 💻 화면 구성
-(1) choose.html   
-: 원하는 이미지 선택   
-(2) edit.html   
-: 선택한 이미지 편집   
-(3) break.html   
-: 편집한 이미지로 벽돌깨기 게임   
-   
+**home.html**
+<img src="/home.png">
+<img src="YOUR URL" width="YOUR_WIDTH" height="YOUR_HEIGHT">
 
+**(1) choose.html**   
+: 원하는 이미지 선택   
+**(2) edit.html**   
+: 선택한 이미지 편집   
+**(3) break.html**   
+: 편집한 이미지로 벽돌깨기 게임   
+<br>
+   
 ## 🎬 시연 영상
 https://youtu.be/gYLwj4hH6UE
-
-
+<br>
+   
 ## 📋 참고 자료
 2D breakout game using pure JavaScript   
 https://developer.mozilla.org/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript   
+<br>
    
-
 ## 🍺 일기장
 https://mygummy2.tistory.com/36
+<br>
    
-
 ## 💎 중요 코드
-✔ 이미지 선택하여 화면에 출력하기
+✔ **이미지 선택하여 화면에 출력하기**
 ```Java Script
 var inCanvas, inCtx; // 캔버스 관련 변수
 var inFile; // 입력 파일 관련 변수
@@ -65,7 +71,7 @@ function drawImage() {
   }
 }
 ```
-✔ 세션 스토리지에 값 저장 및 가져오기
+✔ **세션 스토리지에 값 저장 및 가져오기**
 ```Java Script
 // 값 저장하기
 function selectImage() {
@@ -76,7 +82,7 @@ function selectImage() {
 // 값 가져오기
 var imageNum2 = sessionStorage.getItem("imageNum"); // getItem(key)
 ```
-✔ 이미지 영상처리 후 출력하기
+✔ **이미지 영상처리 후 출력하기**
 ```Java Script
 var outCanvas, outCtx; // 캔버스 관련 변수
 var inPaper, outPaper; // 캔버스에 픽셀값 출력할 종이
@@ -146,7 +152,7 @@ for(var i=0; i<outHeight; i++) {
 // 출력 캔버스에 종이 붙이기
 outCtx.putImageData(outPaper, 0, 0);
 ```
-✔ 이미지 영상처리 후 출력하기
+✔ **이미지 영상처리 후 출력하기**
 ```Java Script
 // ** 벽돌 관련 변수 **
 // 벽돌 개수
@@ -227,5 +233,3 @@ function drawBricks() {
    }
 }
 ```
-   
-
