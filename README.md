@@ -16,32 +16,48 @@
 <br>
    
 ## 💻 화면 구성
-💨 **home.html**
-<img src="https://user-images.githubusercontent.com/84164109/118426167-ae2f7f80-b705-11eb-9f91-974667186695.png">
-💨 **choose.html**: 원하는 이미지 선택
-<img src="https://user-images.githubusercontent.com/84164109/118426218-c7d0c700-b705-11eb-87c2-d257413b21d6.png">
-💨 **edit.html**: 선택한 이미지 편집   
-<img src="https://user-images.githubusercontent.com/84164109/118426232-cf906b80-b705-11eb-94d7-12efe48d18c2.png">
-💨 **break.html**: 편집한 이미지로 벽돌깨기 게임   
-<img src="https://user-images.githubusercontent.com/84164109/118426229-ce5f3e80-b705-11eb-939e-8204a09ed7bd.png">
+💨 **home.html**   
 <br>
+<img src="https://user-images.githubusercontent.com/84164109/118426167-ae2f7f80-b705-11eb-9f91-974667186695.png">
+<br><br>
+💨 **choose.html**: 원하는 이미지 선택   
+<br>
+<img src="https://user-images.githubusercontent.com/84164109/118426218-c7d0c700-b705-11eb-87c2-d257413b21d6.png">
+<br><br>
+💨 **edit.html**: 선택한 이미지 편집   
+<br>
+<img src="https://user-images.githubusercontent.com/84164109/118427418-18492400-b708-11eb-91a1-e6fa9e43624f.png">
+<br><br>
+💨 **break.html**: 편집한 이미지로 벽돌깨기 게임   
+<br>
+<img src="https://user-images.githubusercontent.com/84164109/118426229-ce5f3e80-b705-11eb-939e-8204a09ed7bd.png">
+<br><br>
    
 ## 🎬 시연 영상
-https://youtu.be/gYLwj4hH6UE
+> https://youtu.be/gYLwj4hH6UE
+<br>
+<img src="https://user-images.githubusercontent.com/84164109/118427766-f13f2200-b708-11eb-8231-909582527b29.png">
+<br>
+
+## 💦 보완할 점
+영상처리 알고리즘 관련 함수들 정리하기   
+마우스 이벤트 등등   
+함께 올린 html 파일보고 공부!!
 <br>
    
 ## 📋 참고 자료
 2D breakout game using pure JavaScript   
-https://developer.mozilla.org/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript   
+> https://developer.mozilla.org/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript   
 <br>
    
 ## 🍺 일기장
-https://mygummy2.tistory.com/36
+> https://mygummy2.tistory.com/36
 <br>
    
 ## 💎 중요 코드
 ✔ **이미지 선택하여 화면에 출력하기**
 ```Java Script
+
 var inCanvas, inCtx; // 캔버스 관련 변수
 var inFile; // 입력 파일 관련 변수
 
