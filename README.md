@@ -54,7 +54,7 @@
 > https://mygummy2.tistory.com/36
 <br>
    
-## 💎 중요 코드
+## 💎 주요 코드
 ✔ **이미지 선택하여 화면에 출력하기**
 ```Java Script
 
